@@ -1,4 +1,4 @@
-# react-weather-app
+# idential-frontend-assingment
 A ChakraUI, Typescript & NextJS based Frontend for https://idential.xyz/
 
 **Link to App -** https://idential-frontend-assingment-cp86jldo1-takshakmudgal.vercel.app/
