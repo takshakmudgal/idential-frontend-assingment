@@ -1,5 +1,22 @@
-import { Box, Button, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Stack,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import { relative } from "path";
+
 const Header = () => {
+  const buttonSize = useBreakpointValue({
+    base: "sm",
+    md: "md",
+    lg: "lg",
+    xl: "xl",
+  }); // Set the size of the buttons based on the screen size
+
   return (
     <>
       {/* Header Part */}
@@ -9,7 +26,7 @@ const Header = () => {
           <Text
             fontFamily="Comfortaa"
             fontWeight="700"
-            fontSize="36px"
+            fontSize={{ base: "24px", md: "36px" }} // Decrease the font size for smaller screens
             color="#fff"
           >
             idential
@@ -20,7 +37,7 @@ const Header = () => {
           bgGradient="linear-gradient(225deg, #18C8FF 14.89%, #2A19ED 85.85%)"
           borderRadius="10px"
           fontWeight="600"
-          fontSize="16px"
+          fontSize={{ base: "10px", md: "16px" }} // Decrease the font size for smaller screens
           lineHeight="100%"
           color="#fff"
           _hover={{
@@ -28,93 +45,76 @@ const Header = () => {
               "linear-gradient(225deg, #18C8FF 14.89%, #2A19ED 85.85%)",
           }}
           ml="auto"
+          // Set the size of the button based on the screen size
         >
           Connect Wallet
         </Button>
       </Flex>
       {/* Badge & View Contract Button Section */}
-      <Button
-        display={"flex"}
-        flexDirection={"column"}
+      <Flex
+        marginTop={"45px"}
+        gap={2}
+        flexDirection={{ base: "column", md: "row" }}
         alignItems={"center"}
-        p={"0px 24px"}
-        gap={"32px"}
-        isolation={"isolate"}
-        position={"absolute"}
-        w={"158px"}
-        h={"36px"}
-        left={"calc(50% - 158px/2 - 539px)"}
-        top={"calc(50% - 36px/2 - 253px)"}
-        background={"#006FFA"}
-        borderRadius={"10px"}
-        _hover={{ background: "#006FFA" }}
       >
-        <Text
-          pos={"absolute"}
-          w={"141px"}
-          h={"16px"}
-          left={"9px"}
-          top={"10px"}
-          fontStyle={"normal"}
+        <Button
+          left={{ base: "5%", md: "28%", lg: "16%" }}
+          background={"#006FFA"}
+          borderRadius={"10px"}
+          _hover={{ background: "#006FFA" }}
           fontWeight={"500"}
-          fontSize={"16px"}
-          lineHeight={"100%"}
-          color={"#fff"}
-          flex={"none"}
-          order={"1"}
-          flexGrow={"0"}
-          zIndex={"1"}
+          fontSize={{ base: "12px", md: "16px" }} // Decrease the font size for smaller screens
+          lineHeight="100%"
+          color="#fff"
+          w={"158px"}
+          h={"38px"}
+          mr={{ base: "9%", md: "0%" }}
+
+          // Set the size of the button based on the screen size
         >
           Create new Badge
-        </Text>
-      </Button>
-      <Button
-        flexDirection={"column"}
-        alignItems={"center"}
-        p={"0px 24px"}
-        gap={"32px"}
-        isolation={"isolate"}
-        position={"absolute"}
-        w={"158px"}
-        h={"36px"}
-        left={"calc(50% - 158px/2 - 369px)"}
-        top={"calc(50% - 36px/2 - 253px)"}
-        background={"#FFFFFF"}
-        borderRadius={"30px"}
-        _hover={{ background: "#FFFFFF" }}
-      >
-        <Box
-          as={"span"}
-          pos={"absolute"}
-          w={"25px"}
-          h={"25px"}
-          left={"7px"}
-          top={"5px"}
-          background={`url(/button_icon.png)`}
-          flex={"none"}
-          order={"2"}
-          flexGrow={"0"}
-          zIndex={"2"}
-        />
-        <Text
-          pos={"absolute"}
-          w={"107px"}
-          h={"16px"}
-          left={"38px"}
-          top={"9px"}
-          fontStyle={"normal"}
-          fontWeight={"500"}
-          fontSize={"16px"}
-          lineHeight={"100%"}
-          color={"#4B4B4B"}
-          flex={"none"}
-          order={"1"}
-          flexGrow={"0"}
-          zIndex={"1"}
+        </Button>
+        <Button
+          left={{ base: "5%", md: "28%", lg: "16%" }}
+          w={"158px"}
+          h={"38px"}
+          background={"#FFFFFF"}
+          borderRadius={"30px"}
+          _hover={{ background: "#FFFFFF" }}
+          mr={"9%"}
         >
-          View contract
-        </Text>
-      </Button>
+          <Box
+            pos={"absolute"}
+            as={"span"}
+            w={"25px"}
+            h={"25px"}
+            left={"7px"}
+            top={"5px"}
+            background={`url(/button_icon.png)`}
+            flex={"none"}
+            order={"2"}
+            flexGrow={"0"}
+            zIndex={"2"}
+          />
+          <Text
+            pos={"absolute"}
+            w={"107px"}
+            h={"16px"}
+            ml={"20px"}
+            fontStyle={"normal"}
+            fontWeight={"500"}
+            fontSize={{ base: "14px", md: "16px" }}
+            lineHeight={"100%"}
+            color={"#4B4B4B"}
+            flex={"none"}
+            order={"1"}
+            flexGrow={"0"}
+            zIndex={"1"}
+          >
+            View contract
+          </Text>
+        </Button>
+      </Flex>
     </>
   );
 };

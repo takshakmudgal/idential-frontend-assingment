@@ -1,227 +1,342 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Card, Text, Flex, useBreakpointValue } from "@chakra-ui/react";
 
 const BottomCards = () => {
+  const breakpoints = {
+    "2xl": "96em", // 1536px
+  };
+  const bottomCardSize = useBreakpointValue({
+    base: "sm",
+    md: "md",
+    lg: "lg",
+    xl: "xl",
+  });
   return (
     <>
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        padding="0px 24px"
-        gap="32px"
-        isolation="isolate"
-        position="absolute"
-        width="288px"
-        height="195px"
-        left="calc(50% - 288px/2 - 474px)"
-        top="calc(50% - 195px/2 + 195.5px)"
-        background="#0A335F"
-        borderRadius="10px"
+      <Flex
+        flexWrap="wrap"
+        justifyContent="center"
+        gap={"32px"}
+        marginTop={{
+          base: "30px",
+          md: "50",
+          lg: "65",
+          xl: "74",
+          "2xl": "80px",
+        }}
       >
-        <Text
-          position="absolute"
-          width="206px"
-          height="20px"
-          left="18px"
-          top="22px"
-          fontFamily="Inter"
-          fontStyle="normal"
-          fontWeight="600"
-          fontSize="20px"
-          lineHeight="20px"
-          color="#FFFFFF"
-          flex="none"
-          order="2"
-          flexGrow="0"
-          zIndex="2"
+        <Card
+          background={"#0A335F"}
+          w={{
+            base: "130px",
+            md: "150px",
+            lg: "190px",
+            xl: "230px",
+            "2xl": "288px",
+          }}
+          h={{
+            base: "135px",
+            md: "150px",
+            lg: "160px",
+            xl: "185px",
+            "2xl": "195px",
+          }}
         >
-          Total badges claimed
-        </Text>
-        <Text
-          position="absolute"
-          width="177px"
-          height="77px"
-          left="66px"
-          top="73px"
-          fontFamily="'Inter'"
-          fontStyle="normal"
-          fontWeight="500"
-          fontSize="80px"
-          lineHeight="80px"
-          color="#FFFFFF"
-          flex="none"
-          order="1"
-          flexGrow="0"
-          zIndex="1"
+          <Text
+            left={{
+              base: "28px",
+              md: "24px",
+              lg: "36px",
+              xl: "42px",
+              "2xl": "66px",
+            }}
+            top={{
+              base: "66px",
+              md: "64px",
+              lg: "64px",
+              xl: "42px",
+              "2xl": "43px",
+            }}
+            pos={"absolute"}
+            color={"#fff"}
+            fontSize={{
+              base: "40px",
+              md: "58px",
+              lg: "62px",
+              xl: "80px",
+              "2xl": "80px",
+            }}
+            fontFamily={"Inter"}
+            fontWeight={"500"}
+            fontStyle={"normal"}
+          >
+            984
+          </Text>
+          <Text
+            left={{
+              base: "24px",
+              md: "24px",
+              lg: "12px",
+              xl: "14px",
+              "2xl": "18px",
+            }}
+            top={{
+              base: "12px",
+              md: "12px",
+              lg: "14px",
+              xl: "18px",
+              "2xl": "22px",
+            }}
+            pos={"absolute"}
+            color={"#fff"}
+            fontSize={{
+              base: "12px",
+              md: "14px",
+              lg: "16px",
+              xl: "18px",
+              "2xl": "20px",
+            }}
+            fontFamily={"Inter"}
+            fontWeight={"600"}
+            fontStyle={"normal"}
+          >
+            Total badges claimed
+          </Text>
+        </Card>
+        <Card
+          background={"#0A335F"}
+          w={{
+            base: "130px",
+            md: "150px",
+            lg: "190px",
+            xl: "230px",
+            "2xl": "288px",
+          }}
+          h={{
+            base: "135px",
+            md: "150px",
+            lg: "160px",
+            xl: "185px",
+            "2xl": "195px",
+          }}
         >
-          984
-        </Text>
-      </Box>
-
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        padding="0px 24px"
-        gap="32px"
-        isolation="isolate"
-        position="absolute"
-        width="288px"
-        height="195px"
-        left="calc(50% - 288px/2 - 161px)"
-        top="calc(50% - 195px/2 + 195.5px)"
-        background="#0A335F"
-        borderRadius="10px"
-      >
-        <Text
-          position="absolute"
-          width="212px"
-          height="20px"
-          left="18px"
-          top="20px"
-          fontFamily="Inter"
-          fontStyle="normal"
-          fontWeight="600"
-          fontSize="20px"
-          lineHeight="20px"
-          color="#FFFFFF"
-          flex="none"
-          order="2"
-          flexGrow="0"
-          zIndex="2"
+          <Text
+            left={{
+              base: "28px",
+              md: "24px",
+              lg: "36px",
+              xl: "42px",
+              "2xl": "66px",
+            }}
+            top={{
+              base: "66px",
+              md: "64px",
+              lg: "64px",
+              xl: "42px",
+              "2xl": "43px",
+            }}
+            pos={"absolute"}
+            color={"#fff"}
+            fontSize={{
+              base: "40px",
+              md: "58px",
+              lg: "62px",
+              xl: "80px",
+              "2xl": "80px",
+            }}
+            fontFamily={"Inter"}
+            fontWeight={"500"}
+            fontStyle={"normal"}
+          >
+            247
+          </Text>
+          <Text
+            left={{
+              base: "24px",
+              md: "24px",
+              lg: "12px",
+              xl: "14px",
+              "2xl": "18px",
+            }}
+            top={{
+              base: "12px",
+              md: "12px",
+              lg: "14px",
+              xl: "18px",
+              "2xl": "22px",
+            }}
+            pos={"absolute"}
+            color={"#fff"}
+            fontSize={{
+              base: "12px",
+              md: "14px",
+              lg: "16px",
+              xl: "18px",
+              "2xl": "20px",
+            }}
+            fontFamily={"Inter"}
+            fontWeight={"600"}
+            fontStyle={"normal"}
+          >
+            Past 30 days claiming
+          </Text>
+        </Card>
+        <Card
+          background={"#0A335F"}
+          w={{
+            base: "130px",
+            md: "150px",
+            lg: "190px",
+            xl: "230px",
+            "2xl": "288px",
+          }}
+          h={{
+            base: "135px",
+            md: "150px",
+            lg: "160px",
+            xl: "185px",
+            "2xl": "195px",
+          }}
         >
-          Past 30 days claiming
-        </Text>
-        <Text
-          position="absolute"
-          width="177px"
-          height="77px"
-          left="66px"
-          top="73px"
-          fontFamily="'Inter'"
-          fontStyle="normal"
-          fontWeight="500"
-          fontSize="80px"
-          lineHeight="80px"
-          color="#FFFFFF"
-          flex="none"
-          order="1"
-          flexGrow="0"
-          zIndex="1"
+          <Text
+            left={{
+              base: "28px",
+              md: "24px",
+              lg: "36px",
+              xl: "42px",
+              "2xl": "66px",
+            }}
+            top={{
+              base: "66px",
+              md: "64px",
+              lg: "64px",
+              xl: "42px",
+              "2xl": "43px",
+            }}
+            pos={"absolute"}
+            color={"#fff"}
+            fontSize={{
+              base: "40px",
+              md: "58px",
+              lg: "62px",
+              xl: "80px",
+              "2xl": "80px",
+            }}
+            fontFamily={"Inter"}
+            fontWeight={"500"}
+            fontStyle={"normal"}
+          >
+            64
+          </Text>
+          <Text
+            left={{
+              base: "24px",
+              md: "24px",
+              lg: "12px",
+              xl: "14px",
+              "2xl": "18px",
+            }}
+            top={{
+              base: "12px",
+              md: "12px",
+              lg: "14px",
+              xl: "18px",
+              "2xl": "22px",
+            }}
+            pos={"absolute"}
+            color={"#fff"}
+            fontSize={{
+              base: "12px",
+              md: "14px",
+              lg: "16px",
+              xl: "18px",
+              "2xl": "20px",
+            }}
+            fontFamily={"Inter"}
+            fontWeight={"600"}
+            fontStyle={"normal"}
+          >
+            Past 7 days claiming
+          </Text>
+        </Card>
+        <Card
+          background={"#0A335F"}
+          w={{
+            base: "130px",
+            md: "150px",
+            lg: "190px",
+            xl: "230px",
+            "2xl": "288px",
+          }}
+          h={{
+            base: "135px",
+            md: "150px",
+            lg: "160px",
+            xl: "185px",
+            "2xl": "195px",
+          }}
         >
-          247
-        </Text>
-      </Box>
-
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        padding="0px 24px"
-        gap="32px"
-        isolation="isolate"
-        position="absolute"
-        width="288px"
-        height="195px"
-        left="calc(50% - 288px/2 + 154px)"
-        top="calc(50% - 195px/2 + 195.5px)"
-        background="#0A335F"
-        borderRadius="10px"
-      >
-        <Text
-          position="absolute"
-          width="206px"
-          height="20px"
-          left="18px"
-          top="22px"
-          fontFamily="Inter"
-          fontStyle="normal"
-          fontWeight="600"
-          fontSize="20px"
-          lineHeight="20px"
-          color="#FFFFFF"
-          flex="none"
-          order="2"
-          flexGrow="0"
-          zIndex="2"
-        >
-          Past 7 days claiming
-        </Text>
-        <Text
-          position="absolute"
-          width="177px"
-          height="77px"
-          left="66px"
-          top="73px"
-          fontFamily="'Inter'"
-          fontStyle="normal"
-          fontWeight="500"
-          fontSize="80px"
-          lineHeight="80px"
-          color="#FFFFFF"
-          flex="none"
-          order="1"
-          flexGrow="0"
-          zIndex="1"
-        >
-          64
-        </Text>
-      </Box>
-
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        padding="0px 24px"
-        gap="32px"
-        isolation="isolate"
-        position="absolute"
-        width="288px"
-        height="195px"
-        left="calc(50% - 288px/2 + 470px)"
-        top="calc(50% - 195px/2 + 195.5px)"
-        background="#0A335F"
-        borderRadius="10px"
-      >
-        <Text
-          position="absolute"
-          width="206px"
-          height="20px"
-          left="18px"
-          top="22px"
-          fontFamily="Inter"
-          fontStyle="normal"
-          fontWeight="600"
-          fontSize="20px"
-          lineHeight="20px"
-          color="#FFFFFF"
-          flex="none"
-          order="2"
-          flexGrow="0"
-          zIndex="2"
-        >
-          Total holders
-        </Text>
-        <Text
-          position="absolute"
-          width="177px"
-          height="77px"
-          left="66px"
-          top="73px"
-          fontFamily="'Inter'"
-          fontStyle="normal"
-          fontWeight="500"
-          fontSize="80px"
-          lineHeight="80px"
-          color="#FFFFFF"
-          flex="none"
-          order="1"
-          flexGrow="0"
-          zIndex="1"
-        >
-          355
-        </Text>
-      </Box>
+          <Text
+            left={{
+              base: "28px",
+              md: "24px",
+              lg: "36px",
+              xl: "42px",
+              "2xl": "66px",
+            }}
+            top={{
+              base: "66px",
+              md: "64px",
+              lg: "64px",
+              xl: "42px",
+              "2xl": "43px",
+            }}
+            pos={"absolute"}
+            color={"#fff"}
+            fontSize={{
+              base: "40px",
+              md: "58px",
+              lg: "62px",
+              xl: "80px",
+              "2xl": "80px",
+            }}
+            fontFamily={"Inter"}
+            fontWeight={"500"}
+            fontStyle={"normal"}
+          >
+            355
+          </Text>
+          <Text
+            left={{
+              base: "24px",
+              md: "24px",
+              lg: "12px",
+              xl: "14px",
+              "2xl": "18px",
+            }}
+            top={{
+              base: "12px",
+              md: "12px",
+              lg: "14px",
+              xl: "18px",
+              "2xl": "22px",
+            }}
+            pos={"absolute"}
+            color={"#fff"}
+            fontSize={{
+              base: "12px",
+              md: "14px",
+              lg: "16px",
+              xl: "18px",
+              "2xl": "20px",
+            }}
+            fontFamily={"Inter"}
+            fontWeight={"600"}
+            fontStyle={"normal"}
+          >
+            Total holders
+          </Text>
+        </Card>
+      </Flex>
     </>
   );
 };
