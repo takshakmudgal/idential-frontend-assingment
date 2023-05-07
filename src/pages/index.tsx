@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
-import Cards from "./Cards";
+import Cards from "components/Cards";
 import Head from "next/head";
-import Header from "./Header";
-import BottomCards from "./BottomCards";
+import Header from "components/Header";
+import BottomCards from "components/BottomCards";
 
 const Home = () => {
   return (
